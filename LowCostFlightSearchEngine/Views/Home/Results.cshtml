@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SearchResultViewModel>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Departure</th>
+                <th>Destination</th>
+                <th>Departure date</th>
+                <th>Return date</th>
+                <th>Transfers to destination</th>
+                <th>Return Transfers</th>
+                <th>Passengers</th>
+                <th>Currency</th>
+                <th>Total price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.DepartureAirportName</td>
+                    <td>@item.ArrivalAirportName</td>
+                    <td>@item.DepartureDate</td>
+                    <td>@item.ReturnDate</td>
+                    <td>@item.DepartureTransfers</td>
+                    <td>@item.ReturnTransfers</td>
+                    <td>@item.Passengers</td>
+                    <td>@item.Currency</td>
+                    <td>@item.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
