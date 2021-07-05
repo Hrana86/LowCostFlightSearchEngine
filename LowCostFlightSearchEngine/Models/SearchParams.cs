@@ -20,7 +20,7 @@ namespace LowCostFlightSearchEngine.Models
         public DateTime? ReturnDate { get; set; }
 
         [Required(ErrorMessage = "Please select currency.")]
-        public Currency Currency { get; set; }
+        public Currency? Currency { get; set; }
 
         [Required(ErrorMessage = "Please enter a number of adult passengers.")]
         [Range(1, int.MaxValue)]
